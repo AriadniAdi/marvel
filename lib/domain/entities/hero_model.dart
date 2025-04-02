@@ -16,13 +16,19 @@ class HeroModel {
     final path = thumbnail['path'];
     final ext = thumbnail['extension'];
 
+    final id = map['id'] ?? 0;
+    final name = map['name'] ?? 'No name';
+
+    final rawDescription = map['description'];
+    final description =
+        (rawDescription is String && rawDescription.trim().isNotEmpty)
+            ? rawDescription
+            : 'Not have description';
+
     return HeroModel(
-      id: map['id'] ?? 0,
-      name: map['name'] ?? 'Sem nome',
-      description:
-          (map['description'] as String).trim().isEmpty
-              ? 'Nenhuma descrição disponível.'
-              : map['description'],
+      id: id,
+      name: name,
+      description: description,
       imageUrl: "$path.$ext",
     );
   }
