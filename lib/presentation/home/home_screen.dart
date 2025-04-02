@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:marvel_app/analytcs/analytcs_channel.dart';
 import 'package:marvel_app/core/injector.dart';
 import 'package:marvel_app/core/theme/app_text_style.dart';
 import 'package:marvel_app/generated/l10n.dart';
@@ -90,12 +91,20 @@ class _HomeScreenState extends State<HomeScreen> {
                                   width: 140,
                                   height: 120,
                                   child: GestureDetector(
-                                    onTap:
-                                        () => Navigator.pushNamed(
-                                          context,
-                                          AppRoutes.heroDetailScreen,
-                                          arguments: hero.id,
-                                        ),
+                                    onTap: () {
+                                      Navigator.pushNamed(
+                                        context,
+                                        AppRoutes.heroDetailScreen,
+                                        arguments: hero.id,
+                                      );
+                                      AnalyticsChannel.logEvent(
+                                        'click on button',
+                                        {
+                                          'heroi': 'foo bar',
+                                          'categoria': 'details',
+                                        },
+                                      );
+                                    },
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(12),
                                       child: Stack(
