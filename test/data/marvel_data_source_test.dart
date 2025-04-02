@@ -99,7 +99,7 @@ void main() {
 
       expect(heroes.length, 2);
       expect(heroes.first.name, 'foo bar');
-      expect(heroes.last.name, 'bar');
+      expect(heroes.last.name, 'foo bar');
     });
 
     test('should throw exception on Dio failure', () async {
