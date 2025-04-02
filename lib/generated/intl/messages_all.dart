@@ -12,8 +12,11 @@
 import 'dart:async';
 
 import 'package:flutter/foundation.dart';
+// ignore: depend_on_referenced_packages
 import 'package:intl/intl.dart';
+// ignore: depend_on_referenced_packages
 import 'package:intl/message_lookup_by_library.dart';
+// ignore: depend_on_referenced_packages
 import 'package:intl/src/intl_helpers.dart';
 
 import 'messages_en.dart' as messages_en;

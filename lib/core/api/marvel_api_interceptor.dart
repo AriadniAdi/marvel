@@ -3,6 +3,7 @@ import 'package:dio/dio.dart';
 // ignore: library_prefixes
 import 'package:marvel_app/core/constants.dart' as AppKeys;
 
+// ignore: depend_on_referenced_packages
 import 'package:crypto/crypto.dart';
 import 'dart:convert';
 
