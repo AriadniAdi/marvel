@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:marvel_app/core/injector.dart';
 import 'package:marvel_app/core/theme/app_text_style.dart';
+import 'package:marvel_app/generated/l10n.dart';
 import 'package:marvel_app/presentation/home/bloc/home_bloc.dart';
 import 'package:marvel_app/presentation/home/bloc/home_event.dart';
 import 'package:marvel_app/presentation/home/bloc/home_state.dart';
@@ -57,7 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Featured Characters'.toUpperCase(),
+                  S.of(context).featuredCharacters.toUpperCase(),
                   style: AppTextStyles.title,
                 ),
                 SizedBox(height: 13),
@@ -65,9 +66,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   height: 180,
                   child:
                       heroes.isEmpty && _searchController.text.isNotEmpty
-                          ? const Center(
+                          ? Center(
                             child: Text(
-                              'Nenhum personagem encontrado',
+                              S.of(context).noCharacterFound,
                               style: TextStyle(
                                 fontSize: 16,
                                 color: Colors.black54,
@@ -135,7 +136,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 SizedBox(height: 13),
                 Text(
-                  'Marvel Characters'.toUpperCase(),
+                  S.of(context).marvelCharacters.toUpperCase(),
                   style: AppTextStyles.title,
                 ),
                 SizedBox(height: 5),
@@ -147,8 +148,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   style: const TextStyle(color: Colors.black),
                   cursorColor: Colors.black,
                   textAlignVertical: TextAlignVertical.bottom,
-                  decoration: const InputDecoration(
-                    hintText: 'Search characters...',
+                  decoration: InputDecoration(
+                    hintText: S.of(context).searchCharacters,
                     hintStyle: TextStyle(color: Colors.black),
                     prefixIcon: Icon(Icons.search, color: Colors.black),
                     isDense: true,
@@ -164,9 +165,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 Expanded(
                   child:
                       heroes.isEmpty && _searchController.text.isNotEmpty
-                          ? const Center(
+                          ? Center(
                             child: Text(
-                              'Nenhum personagem encontrado',
+                              S.of(context).noCharacterFound,
                               style: TextStyle(
                                 fontSize: 16,
                                 color: Colors.black54,
