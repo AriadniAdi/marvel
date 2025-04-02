@@ -7,12 +7,16 @@ import 'package:marvel_app/core/injector.dart';
 import 'package:marvel_app/core/theme/app_theme.dart';
 import 'package:marvel_app/generated/l10n.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
 import 'package:marvel_app/presentation/home/home_screen.dart';
 import 'package:marvel_app/routes/app_router.dart';
 import 'package:marvel_app/routes/app_routes.dart';
 
 void main() async {
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+
   WidgetsFlutterBinding.ensureInitialized();
   setupLocator();
 

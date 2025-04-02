@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "49449820726",
+    "project_id": "marvel-app-maitha",
+    "storage_bucket": "marvel-app-maitha.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:49449820726:android:db2599c1b5d9be70f6ee97",
+        "android_client_info": {
+          "package_name": "com.example.marvel_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVcbIWyNQK5JgJ_tGvrVTECyjqTY2ZeGU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
