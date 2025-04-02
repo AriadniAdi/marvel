@@ -43,4 +43,5 @@ flutter run -d chrome
 ```
 
 E pronto! Se tudo der certo você deve ver esta página:
-![Demonstration of app](assets/images/marvel_screenshot.png)
+
+![Demonstration of app](assets/marvel_screenshot.png)
